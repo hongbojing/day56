@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
   <meta charset="UTF-8">
   <title>day #</title>
@@ -7,7 +7,15 @@
   <link rel="stylesheet" href="css/anotherstyle.css">
 </head>
 <body>
-
-<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+  <div class="center" ng-controller="myController as myCtrl">
+    <input type="text" ng-model="myCtrl.value">
+    <br>
+    <button class="btn btn-blue" ng-click="myCtrl.convertArray(myCtrl.value)">Click to convert</button>
+    <br>
+    {{myCtrl.result}}
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/lib/angular/angular.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
